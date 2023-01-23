@@ -25,8 +25,6 @@ with open("Milestone_Input\Milestone_Input\Milestone 7\POI.txt","r") as d:
             for j in range(2,len(l)):
                 temp.append(int(l[j])) 
             target_points.append(temp)
-#print(target_points)
-#print(n)
 
 def find_distance(points):
 
@@ -52,12 +50,6 @@ def dist_match(s,t):
         return 1
     else:
         return 0
-    '''
-    if sum(a) == sum(b):
-        return 1
-    else:
-        return 0
-    '''
 
 def find_area(x,y):
     area = 0.0

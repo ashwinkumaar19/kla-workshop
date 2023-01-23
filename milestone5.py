@@ -26,8 +26,7 @@ with open("Milestone_Input\Milestone_Input\Milestone 5\POI.txt","r") as d:
             for j in range(2,len(l)):
                 temp.append(int(l[j])) 
             target_points.append(temp)
-print(target_points)
-#print(n)
+
 
 def find_distance(points):
 
@@ -48,7 +47,7 @@ def dist_match(source,target):
             temp.append(target[i+1])
             t.append(temp)
             i += 2
-    #print(t)    
+  
 
     s = []
     i = 1
@@ -59,12 +58,12 @@ def dist_match(source,target):
             temp.append(source[i+1])
             s.append(temp)
             i += 2
-    #print(s)   
+
     
     a = find_distance(t)
     b = find_distance(s)
 
-    #print(a,b)
+
     if sum(a) == sum(b):
         return 1
     else:
@@ -82,9 +81,8 @@ for i in lines:
             for j in range(2,len(l)):
                 temp.append(int(l[j]))
                 points.append(temp)
-            #print(temp)
-            #print(target_points[0])
-        if dist_match(temp,target_points[0]): #or dist_match(temp,target_points[1]):
+
+        if dist_match(temp,target_points[0]): 
             o.write("boundary\n")
             o.write("layer 1\n")
             o.write("datatype 0\n")
