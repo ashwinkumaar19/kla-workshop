@@ -1,8 +1,17 @@
 import matplotlib.pyplot as plt
 
-o = open("output.txt","w")
+
+o = open("output2.txt","w")
+
+
 with open("Milestone_Input\Milestone_Input\Milestone 2\Source.txt","r") as f:
     lines = f.readlines()
+
+for i in lines:
+    if i == "boundary\n":
+        break
+    else:
+        o.write(i)
 
 target_points = []
 n = 0
@@ -32,7 +41,7 @@ for i in lines:
 
 def ismatch(target):
     print(target)
-
+    '''
     new = []
     i = 1
     while(i < len(target)):
@@ -46,7 +55,8 @@ def ismatch(target):
     plt.figure()
     plt.plot(x,y)
     plt.show()
-
+    '''
+    
 #for i in points:
 #    for j in target_points:
 ismatch(target_points[0])
